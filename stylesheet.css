@@ -1,0 +1,53 @@
+
+body {
+  background-color: lightgrey;
+}
+
+.icons {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 40px;
+}
+
+.fa {
+  color: black;
+}
+
+.center {
+  text-align: center;
+  padding-top: 45px;
+}
+
+.figure {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: 1px #e4e4e4 solid;
+}
+
+#name {
+  letter-spacing: 1.5px;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 32px;
+}
+
+#description {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 550px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+#avatar {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#linkicons-header {
+
+}
