@@ -1,7 +1,7 @@
 function inputCommand(command, term){
   var input = command.toLowerCase()
   if(input == 'help') {
-    term.echo(new String("Unhide: Reveals linkicons \nGitHub: Opens up my GitHub profile \nLinkedIn: Opens my LinkedIn profile \nResume: Opens a page with my resume \nBlog: Opens my blog "));
+    term.echo(new String("Unhide: Reveals linkicons \n\nGitHub: Opens up my GitHub profile \n\nLinkedIn: Opens my LinkedIn profile \n\nTuring: Opens my Turing School profile \n\nResume: Opens a page with my resume \n\nBlog: Opens my blog "));
   } else if(input == 'github') {
     window.open("https://www.github.com/nzenitram");
   } else if(input == 'linkedin') {
@@ -12,6 +12,8 @@ function inputCommand(command, term){
     window.open("http://www.nzenitram.com/blog/")
   } else if(input == 'unhide') {
     $('#linkicons-header').removeAttr('style');
+  } else if(input == 'turing') {
+    window.open("https://www.turing.io/alumni/nicholas-martinez")
   } else {
     term.echo(new String('Invalid Command: Type "Help" for more options'));
   };
