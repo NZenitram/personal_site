@@ -51,3 +51,12 @@ body {
 #linkicons-header {
 
 }
+
+#console {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 550px;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 5px;
+}
