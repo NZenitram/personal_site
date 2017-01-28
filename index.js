@@ -1,7 +1,7 @@
 function inputCommand(command, term){
   var input = command.toLowerCase()
   if(input == 'help') {
-    term.echo(new String('unhide: reveals linkicons'));
+    term.echo(new String("Unhide: Reveals linkicons \nGitHub: Opens up my GitHub profile \nLinkedIn: Opens my LinkedIn profile \nResume: Opens a page with my resume \nBlog: Opens my blog "));
   } else if(input == 'github') {
     window.open("https://www.github.com/nzenitram");
   } else if(input == 'linkedin') {
@@ -10,6 +10,8 @@ function inputCommand(command, term){
     window.open("http://www.nzenitram.com/blog/index.php/resume/");
   } else if(input == 'blog') {
     window.open("http://www.nzenitram.com/blog/")
+  } else if(input == 'unhide') {
+    $('#linkicons-header').removeAttr('style');
   } else {
     term.echo(new String('Invalid Command: Type "Help" for more options'));
   };
