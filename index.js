@@ -48,6 +48,7 @@ function unhide(){
 
 $( document ).ready(function() {
 
-  setTimeout(function(){ unhide(); }, 10000);
+  setTimeout(function(){ unhide(); }, 5000);
+
 
 });
