@@ -41,3 +41,13 @@ jQuery(function($, terminal) {
         prompt: 'nm> '
     });
 });
+
+function unhide(){
+  $('#linkicons-header').removeAttr('style');
+}
+
+$( document ).ready(function() {
+
+  setTimeout(function(){ unhide(); }, 10000);
+
+});
