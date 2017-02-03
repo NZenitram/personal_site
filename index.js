@@ -49,6 +49,7 @@ function unhide(){
 $( document ).ready(function() {
 
   setTimeout(function(){ unhide(); }, 5000);
+  $(".button-collapse").sideNav();
 
 
 });
