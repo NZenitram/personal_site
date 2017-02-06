@@ -1,7 +1,7 @@
 function inputCommand(command, term){
   var input = command.toLowerCase()
   if(input == 'help') {
-    term.echo(new String("Reveal: Reveals linkicons \n\nGitHub: Opens up my GitHub profile \n\nLinkedIn: Opens my LinkedIn profile \n\nTuring: Opens my Turing School profile \n\nResume: Opens a page with my resume \n\nBlog: Opens my blog "));
+    term.echo(new String("Reveal: Reveals links \n\nGitHub: Opens up my GitHub profile \n\nLinkedIn: Opens my LinkedIn profile \n\nTuring: Opens my Turing School profile \n\nResume: Opens a page with my resume \n\nBlog: Opens my blog "));
   } else if(input == 'github') {
     window.open("https://www.github.com/nzenitram");
   } else if(input == 'linkedin') {
@@ -11,7 +11,7 @@ function inputCommand(command, term){
   } else if(input == 'blog') {
     window.open("http://www.nzenitram.com/blog/")
   } else if(input == 'reveal') {
-    $('#linkicons-header').removeAttr('style');
+    $('.info-link').click()
   } else if(input == 'turing') {
     window.open("https://www.turing.io/alumni/nicholas-martinez")
   } else {
@@ -20,25 +20,24 @@ function inputCommand(command, term){
 };
 
 jQuery(function($, terminal) {
-    $('#console').terminal(function(command, term) {
-        if (command !== '') {
-            try {
-                // var result = window.eval(command);
-                if (command !== undefined) {
-                    // term.echo(new String(command));
-                    inputCommand(command, term);
-                }
-            } catch(e) {
-                term.error(new String(e));
-            }
-        } else {
-           term.echo('');
+  $('#console').terminal(function(command, term) {
+  if (command !== '') {
+    try {
+      if (command !== undefined) {
+        inputCommand(command, term);
         }
-    }, {
-        greetings: 'Type Help For a List of Commands:',
-        name: 'js_demo',
-        height: 200,
-        prompt: 'nm> '
+        } catch(e) {
+          term.error(new String(e));
+        }
+        } else {
+          term.echo('');
+  }
+},
+  {
+    greetings: 'Type Help For a List of Commands:',
+    name: 'js_demo',
+    height: 200,
+    prompt: 'nm> '
     });
 });
 
@@ -48,7 +47,16 @@ function unhide(){
 
 $( document ).ready(function() {
 
+  $('#shadow').mouseover(function(){
+    $(this).addClass('hover fa-lg');
+  });
+
+  $('#shadow').mouseout(function(){
+    $(this).removeClass('hover fa-lg');
+  });
+
   setTimeout(function(){ unhide(); }, 5000);
+
   $(".button-collapse").sideNav();
 
 
